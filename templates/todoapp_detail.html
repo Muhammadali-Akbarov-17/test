@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} This is Detail{% endblock title %}
+
+{% block content %}
+    <div class="card bg-light">
+  
+        <ul>
+            <li>{{object.id}}</li>
+            <li>{{object.title}}</li>
+            <li>{{object.description | safe}}</li>
+            <li>{{object.is_done}}</li>
+            <li>{{object.date}}</li>
+            
+        </ul>
+   
+    </div>
+    <hr>
+    <a href="{% url 'todo_new' %}"><button class="button is-primary">Create</button></a> 
+    <a href="{% url 'todo_edit' object.id%}"><button class="button is-primary">Edit IT</button></a>
+    <a href="{% url 'todo_delete' object.id%}"><button class="button is-danger">Delete IT</button></a>
+    
+{% endblock content %}
