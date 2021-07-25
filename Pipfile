@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+whitenoise = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
 
